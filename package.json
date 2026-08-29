@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:pages": "tsc -b && vite build --mode github-pages",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
@@ -23,6 +24,9 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "check": "npm run format:check && npm run lint && npm run typecheck && npm run test",
+    "docker:dev": "docker compose up --build dev",
+    "docker:prod": "docker compose up --build prod",
+    "docker:down": "docker compose down --remove-orphans",
     "prepare": "husky"
   },
   "dependencies": {

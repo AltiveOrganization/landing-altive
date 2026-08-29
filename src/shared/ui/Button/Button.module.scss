@@ -1,35 +1,82 @@
 @use '../../../styles/variables' as *;
 
 .button {
-  min-height: 3rem;
-  padding: 0.75rem 1.25rem;
-  color: #08101f;
-  font-weight: 750;
+  display: inline-flex;
+  gap: 0.625rem;
+  align-items: center;
+  justify-content: center;
+  color: $color-text;
+  font-weight: 700;
   cursor: pointer;
-  background: $color-accent;
-  border: 0;
+  background: transparent;
+  border: 1px solid $color-accent;
   border-radius: 999px;
-  box-shadow: 0 0.75rem 2.5rem rgb(68 127 255 / 25%);
+  text-transform: uppercase;
   transition:
-    transform 160ms ease,
-    box-shadow 160ms ease;
-
-  &:hover {
-    box-shadow: 0 1rem 3rem rgb(68 127 255 / 38%);
-    transform: translateY(-2px);
-  }
+    color 160ms ease,
+    background-color 160ms ease,
+    border-color 160ms ease,
+    opacity 160ms ease;
 
   &:focus-visible {
-    outline: 3px solid #fff;
+    outline: 2px solid $color-text;
     outline-offset: 3px;
-  }
-
-  &:active {
-    transform: translateY(0);
   }
 
   &:disabled {
     cursor: not-allowed;
-    opacity: 0.55;
+    opacity: 0.5;
   }
+}
+
+.primary:not(:disabled):hover {
+  background: $color-accent;
+  color: $color-background;
+}
+
+.secondary {
+  color: $color-accent;
+  background: transparent;
+
+  &:not(:disabled):hover {
+    color: $color-background;
+    background: $color-accent;
+  }
+}
+
+.ghost {
+  color: $color-text;
+  background: transparent;
+  border-color: transparent;
+
+  &:not(:disabled):hover {
+    color: $color-accent;
+  }
+}
+
+.sm {
+  min-height: 2.25rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+}
+
+.md {
+  min-height: 3.125rem;
+  padding: 0.875rem 2rem;
+  font-size: 0.875rem;
+}
+
+.lg {
+  min-height: 3.75rem;
+  padding: 1rem 2.5rem;
+  font-size: 1rem;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.icon {
+  display: inline-flex;
+  flex: 0 0 auto;
 }

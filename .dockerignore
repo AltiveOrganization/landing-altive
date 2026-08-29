@@ -1,0 +1,15 @@
+.git
+.github
+.husky
+.codebase-memory
+node_modules
+dist
+storybook-static
+coverage
+.env
+.env.*
+!.env.example
+*.local
+*.log
+.DS_Store
+README.md
