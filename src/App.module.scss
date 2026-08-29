@@ -1,0 +1,39 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  padding: 2rem;
+  place-items: center;
+}
+
+.hero {
+  width: min(100%, 52rem);
+  padding: clamp(2rem, 7vw, 5rem);
+  text-align: center;
+  background: rgb(20 24 35 / 72%);
+  border: 1px solid rgb(255 255 255 / 12%);
+  border-radius: 2rem;
+  box-shadow: 0 2rem 6rem rgb(0 0 0 / 35%);
+  backdrop-filter: blur(1rem);
+
+  h1 {
+    margin: 0.4rem 0 1rem;
+    font-size: clamp(3rem, 9vw, 6rem);
+    line-height: 0.95;
+    letter-spacing: -0.06em;
+  }
+
+  p {
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+    color: #b7bfd2;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+}
+
+.eyebrow {
+  color: #8eb8ff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
