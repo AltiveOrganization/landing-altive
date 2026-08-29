@@ -3,10 +3,8 @@
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
-const repositoryName = process.env.GITHUB_REPOSITORY?.split('/')[1];
-
-export default defineConfig({
-  base: process.env.GITHUB_ACTIONS && repositoryName ? `/${repositoryName}/` : '/',
+export default defineConfig(({ command }) => ({
+  base: command === 'build' ? '/landing-altive/' : '/',
   plugins: [react()],
   test: {
     environment: 'jsdom',
@@ -14,4 +12,4 @@ export default defineConfig({
     setupFiles: './src/test/setup.ts',
     css: true,
   },
-});
+}));

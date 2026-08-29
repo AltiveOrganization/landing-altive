@@ -23,3 +23,13 @@ npm run dev
 - `npm run check` — run all quality checks
 
 Node.js 20.19+ or 22.12+ is required. Pushes to `main` are deployed to GitHub Pages.
+
+## Copyright and usage
+
+Copyright © 2026 Altive. All rights reserved.
+
+This landing page, including its source code, design, text, graphics, branding, and other
+materials, is proprietary to Altive. Copying, modification, publication, distribution,
+sublicensing, or commercial use is prohibited without prior written permission from Altive.
+
+See [LICENSE](./LICENSE) for the full terms.
